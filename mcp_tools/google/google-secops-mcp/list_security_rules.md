@@ -1,1 +1,0 @@
-列出检测规则 (“detection rules”) 或安全规则 (“security_rules”) 的清单。用于掌握哪些规则在用、有哪些规则被触发。 

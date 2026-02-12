@@ -1,1 +1,0 @@
-在 Chronicle Security Operations 中执行安全事件 (“security events”) 检索，比如查找某一时间段、某一类型、某一主机或行为（如 PowerShell）相关的事件。 

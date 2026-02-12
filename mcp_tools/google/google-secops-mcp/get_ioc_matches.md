@@ -1,1 +1,0 @@
-对 “Indicator of Compromise (IoC)” 进行匹配并检索，查看哪些事件或告警与已知 IoC 相关联。 
