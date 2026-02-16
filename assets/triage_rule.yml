@@ -1,0 +1,4 @@
+rule_name: Webshell文件上传成功
+rule_content: alert_name like '*webshell*' and request_body like '*shell*' and status_code == 200
+triage_result: 定向攻击
+attack_result: 成功
