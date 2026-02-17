@@ -10,3 +10,8 @@ SOC子引擎，基于agent-skills技术通过AI赋能SOC平台，对SOC告警进
 3、询问用户是否进行响应处置，若需要，则调用'{reference/incident_response/incident_response.md}'对失陷主机进行响应处置。响应处置完毕后，生成对应的bash/powershell响应脚本（脚本要尽可能地泛化），生成后询问用户是否手工编辑修改或反馈模型修改，最终用户审核后固化到'{scripts/incident_response}'。<br>
 4、最终根据模板'{assets/analysis_report.md}'输出分析报告保存到'{reports/}'路径。<br>
 5、用户可主动主动输入SKILL到'{reference/}'对SOC子引擎的研判、调查、响应能力进行训练。<br>
+
+## 能力边界
+1、SOC子引擎不具备检测能力，无法从根据原始日志检出告警。
+2、SOC子引擎核心为赋能SOC平台，不具备大数据处理能力，只能研判调查响应SOC平台聚合后的告警，无法对海量告警进行实时处理。
+3、SOC子引擎具备自学习能力，初始使用时算力消耗高，但随着rules、scripts、skills的增加，算力消耗会逐渐降低。
