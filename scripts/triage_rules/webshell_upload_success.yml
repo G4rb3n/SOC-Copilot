@@ -1,0 +1,4 @@
+rule_name: Webshell文件上传成功
+rule_content: alert_name like '*(webshell|文件上传|后门|脚本上传)*' and request_body like '*shell|eval|system|exec)*' and status_code == 200 and reponse_body like '*.(php|asp|aspx|jsp|jspx)'
+triage_result: 定向攻击
+attack_result: 成功
