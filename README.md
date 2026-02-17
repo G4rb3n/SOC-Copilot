@@ -5,8 +5,8 @@ SOC子引擎，基于agent-skills技术通过AI赋能SOC平台，对SOC告警进
 ![架构图](./SOC-Copilot.png)
 
 ## 工作流程
-1、获取用户输入的告警日志，调用子技能`${triage}`进行告警研判分析，对告警进行分类，定向攻击、自动化攻击、渗透测试、病毒木马、脆弱性风险、疑似攻击行为、业务行为。
-2、若需要进一步分析或溯源，则调用子技能`${investigation}`，通过API异步从SOC平台获取该告警相关的资产责任人、原始日志，然后对告警进行关联分析及攻击路径溯源。
-3、最后调用子技能`${response}`，通过用户提供的失陷主机登录方式（如SSH、RDP等），登录失陷主机，进行处置。
-4、总结本次研判、调查、响应的经验，生成对应的研判规则、溯源规则、响应脚本，用户审核后固化到规则引擎。
-5、用户可主动主动输入SKILL对SOC子引擎进行训练。
+1、从用户输入的路径获取该目录下的所有告警日志，通过经验'{reference/triage/triage.md}'对告警进行研判分析。研判完成后，按照模板'{assets/triage_rule.yml}'生成对应的研判规则（规则要尽可能地泛化），生成后询问用户是否手工编辑修改或反馈模型修改，最终用户审核后固化到'{scripts/triage_rules}'。
+2、询问用户是否需要进一步分析或溯源，若需要，则调用'{reference/investigation/investigation.md}'对告警进行调查分析。调查溯源完毕后，生成对应的python调查脚本（脚本要尽可能地泛化），生成后询问用户是否手工编辑修改或反馈模型修改，最终用户审核后固化到'{scripts/investigation}'
+3、询问用户是否进行响应处置，若需要，则调用'{reference/incident_response/incident_response.md}'对失陷主机进行响应处置。响应处置完毕后，生成对应的bash/powershell响应脚本（脚本要尽可能地泛化），生成后询问用户是否手工编辑修改或反馈模型修改，最终用户审核后固化到'{scripts/incident_response}'。
+4、最终根据模板'{assets/analysis_report.md}'输出分析报告保存到'{reports/}'路径。
+5、用户可主动主动输入SKILL到'{reference/}'对SOC子引擎的研判、调查、响应能力进行训练。
