@@ -18,7 +18,7 @@ SOC子引擎，基于agent-skills技术通过AI赋能SOC平台，对SOC告警进
 ![曲线图](./Graph.png)
 
 ## 使用步骤
-'''
+```bash
 # 下载安装SOC-Copilot Skill
 git clone https://github.com/G4rb3n/SOC-Copilot.git
 mv SOC-Copilot ~/.claude/skills/
@@ -27,7 +27,7 @@ cd ~/.claude/skills/SOC-Copilot
 # 运行SOC-Copilot Skill
 claude
 /soc-copilot ./samples/
-'''
+```
 
 ## 效果演示
 研判环节
