@@ -16,3 +16,25 @@ SOC子引擎，基于agent-skills技术通过AI赋能SOC平台，对SOC告警进
 2、SOC子引擎核心为赋能SOC平台，不具备大数据处理能力，只能研判调查响应SOC平台聚合后的告警，无法对海量告警进行实时处理。<br>
 3、SOC子引擎具备自学习能力，初始使用时算力消耗高，但随着rules、scripts、skills的增加，算力消耗会逐渐降低。<br>
 ![曲线图](./Graph.png)
+
+## 使用步骤
+'''
+# 下载安装SOC-Copilot Skill
+git clone https://github.com/G4rb3n/SOC-Copilot.git
+mv SOC-Copilot ~/.claude/skills/
+cd ~/.claude/skills/SOC-Copilot
+
+# 运行SOC-Copilot Skill
+claude
+/soc-copilot ./samples/
+'''
+
+## 效果演示
+研判环节
+![研判环节](./triage.png)
+调查环节
+![调查环节](./investigation.png)
+响应环节
+![响应环节](./response.png)
+报告环节
+![报告环节](./report.png)
