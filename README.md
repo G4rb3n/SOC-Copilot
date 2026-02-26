@@ -1,5 +1,6 @@
 # SOC-Copilot
 SOC子引擎，基于agent-skills技术通过AI赋能SOC平台，对SOC告警进行研判、调查、响应。SOC子引擎的核心理念为构建一个自我学习的安全引擎，可预测的告警通过规则匹配并通过脚本自动化处置，不可预测的告警通过大模型研判分析，分析完后生成对应的规则和处置脚本，最终由用户审核后固化到规则引擎，除此之外，用户可以主动输入SKILL文件对SOC子引擎进行训练。
+\#Agentic SOC \#Next-Gen SIEM \#AI CyberSecurity \#Incident Response
 
 ## 架构图
 ![架构图](./SOC-Copilot.png)
