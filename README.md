@@ -63,14 +63,27 @@ SOC-Copilot采用创新的**双轨处理机制**：
 
 ### 安装
 
+#### 方式一：Claude Code 用户
+
 ```bash
 # 克隆仓库
 git clone https://github.com/G4rb3n/SOC-Copilot.git
 
-# 安装到Claude Skills目录
+# 安装到 Claude Skills 目录
 mv SOC-Copilot ~/.claude/skills/
 cd ~/.claude/skills/SOC-Copilot
 ```
+
+#### 方式二：OpenClaw 用户
+
+如果您使用 [OpenClaw](https://github.com/OpenClaw/OpenClaw) 平台：
+
+```bash
+# 克隆到 OpenClaw Skills 目录
+git clone https://github.com/G4rb3n/SOC-Copilot.git ~/.openclaw/skills/SOC-Copilot
+```
+
+> 💡 **提示**：安装后需要开始新会话（运行 `/new`）才能加载技能。
 
 ### 使用
 

@@ -63,6 +63,8 @@ SOC-Copilot employs an innovative **dual-track processing mechanism**:
 
 ### Installation
 
+#### Method 1: For Claude Code Users
+
 ```bash
 # Clone the repository
 git clone https://github.com/G4rb3n/SOC-Copilot.git
@@ -71,6 +73,17 @@ git clone https://github.com/G4rb3n/SOC-Copilot.git
 mv SOC-Copilot ~/.claude/skills/
 cd ~/.claude/skills/SOC-Copilot
 ```
+
+#### Method 2: For OpenClaw Users
+
+If you're using the [OpenClaw](https://github.com/OpenClaw/OpenClaw) platform:
+
+```bash
+# Clone to OpenClaw Skills directory
+git clone https://github.com/G4rb3n/SOC-Copilot.git ~/.openclaw/skills/SOC-Copilot
+```
+
+> 💡 **Tip**: After installation, start a new session (run `/new`) to load the skill.
 
 ### Usage
 
